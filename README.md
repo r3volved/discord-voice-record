@@ -7,6 +7,8 @@ Record a discord voice channel to .pcm
 
 Opus 1.1
 
+FFMPEG
+
 Node8
 
 gcc-4.9
