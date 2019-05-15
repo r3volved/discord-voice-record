@@ -1,0 +1,15 @@
+{
+  "name": "discord-voice-record",
+  "version": "1.0.0",
+  "description": "Record discord voice channels to .pcm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "r3volved",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.5.0",
+    "node-opus": "^0.3.1"
+  }
+}
