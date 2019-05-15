@@ -30,4 +30,4 @@ npm install discord.js node-opus
 
 ## Playback
 
-play -t raw -r 48k -e signed -b 16 -c 2 ./recordings/FILENAME.pcm
+play -t raw -r 48k -e signed -b 16 -c 2 FILENAME.pcm
