@@ -2,6 +2,7 @@
 
 Record a discord voice channel to .pcm
 
+
 ## Required
 
 Opus 1.1
@@ -11,6 +12,7 @@ Node8
 gcc-4.9
 
 npm install discord.js node-opus
+
 
 ## Usage
 
@@ -22,6 +24,7 @@ npm install discord.js node-opus
 
 ### Stop recording
 `stop #channel-name`
+
 
 ## Playback
 
