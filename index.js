@@ -16,7 +16,7 @@ client.on('message', message => {
 
     //Usage: record channel-name
     if( message.cleanContent.startsWith('start') ) {
-        var [command, ...channel] = message.content.split(/\s+/)
+        var [command, ...channel] = message.cleanContent.split(/\s+/)
         var voiceChannel = client.channels.find(c => c.name.toLowerCase() === channel.join(" ").toLowerCase().replace("#","") )
 
         if( voiceChannel ) {
@@ -40,7 +40,7 @@ client.on('message', message => {
 
     //Usage: stop channel-name
     if( message.cleanContent.startsWith('stop') ) {
-        var [command, ...channel] = message.content.split(/\s+/)
+        var [command, ...channel] = message.cleanContent.split(/\s+/)
         var voiceChannel = client.channels.find(c => c.name.toLowerCase() === channel.join(" ").toLowerCase().replace("#","") )
 
         if( voiceChannel ) {
@@ -57,12 +57,13 @@ client.on('message', message => {
     
     //Usage: recording
     if( message.cleanContent.startsWith('state') ) {
-        var [command, ...channel] = message.content.split(/\s+/)
+        var [command, ...channel] = message.cleanContent.split(/\s+/)
         message.channel.send(Object.keys(streams).map(s => {
             return [ 
                 streams[s].path.split(/\//)[2],
                 `Active : ${!streams[s].closed} | Writable : ${streams[s].writable}`,
-                `Bytes written : ${streams[s].bytesWritten.toLocaleString()}`
+                `Bytes written : ${streams[s].bytesWritten.toLocaleString()}`,
+                `--`
             ].join("\n")
         }).join("\n") || "None")
     }    
