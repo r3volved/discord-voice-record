@@ -2,7 +2,7 @@
 
 Record a discord voice channel to .pcm
 
-## Req
+## Required
 
 Opus 1.1
 
@@ -11,3 +11,7 @@ Node8
 gcc-4.9
 
 npm install discord.js node-opus
+
+## Playback
+
+play -t raw -r 48k -e signed -b 16 -c 2 ./recordings/FILENAME.pcm
